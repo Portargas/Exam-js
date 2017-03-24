@@ -1,0 +1,41 @@
+<!DOCTYPE html><html>
+    <head>
+        <title>Faltas</title>
+        <link rel='stylesheet' href='exame_av_2_02.css'>
+		<script type="text/javascript" src="exame_av_2_02.js"></script>
+    </head>
+    <body>
+		<h1>FALTAS</h1>
+		
+        <form class='contacto'  action="#" onsubmit="return validar()">
+            <div><label>DNI:</label><input type='text' id="dni" value=''></div>
+            <div><label>Email:</label><input type='text' id="email" value=''></div>
+            <div>
+				<label>Módulo:</label>
+				<select name="modulo" id="modulo">
+					<option value="DESPW">Despregamento de Aplicacións Web</option>
+					<option value="DIW">Deseño de Interfaces Web</option>
+					<option value="DWCC">Desenvolvemento Web en Contornos Cliente</option>
+					<option value="DWCS">Desenvolvemento Web en Contornos Servidor</option>
+					<option value="EIE">Empresa e Iniciativa Emprendedora</option>
+				</select>
+			</div>
+			<div><label>Faltas:</label><input type='text' id="faltas" value=''></div>
+            <div><input type='submit' value='Grabar Datos'></div>
+			<br/>
+			<br/>
+						
+			<div id="datos">
+			<h1>LISTADO DE FALTAS</h1>
+			<table border="1" cellpadding="15" cellspacing="0" id="taboa" >
+				<tr>
+					<th>DNI</th>
+					<th>Email </th>
+					<th>Módulo </th>
+					<th>Faltas</th>					
+				</tr>
+			</table>
+			</div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	
+		table {
+			border-collapse: collapse;
+			border: 1px solid #0e76b7;
+			font-size: 14px;
+			font-family: Arial;
+			text-align: left;
+		}
+		
+		table tr th {
+			color: white;
+			font-weight: bold;
+							
+		}
+		
+		table td, table tr th {
+			border:solid 1px #0e76b7;
+		}
+		 
+		table th {
+			font-weight: bold;
+			background-color: #89cdf9;
+			padding:5px;
+		}
+		
+		table tr {
+			background-color: #f2f5fb;
+			text-align: center;
+		}
+		  
+		table td {
+			padding: 5px 5px;
+		}
+		
+		table td.pdac{
+			color: red;
+			font-weight: bold;
+		}
+		
+		table td.pdac:hover{
+			color: red;
+			background: #A3A3A3;
+			font-size: 24px;
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+<script language="javascript">
+
+// escribe aquí o teu código JavaScript
+    
+var datos = [    
+    
+    ["0000-A","Carla","Salgador Rivera",6,7,6,6,3],    
+    ["1111-B","Xoan","Gonzalez Diaz",0,1,1,1,2],    
+    ["2222-C","laura","Gomez Sanchez",16,17,16,6,8],    
+    ["3333-D","Hugo","Duran Rodriguez",10,6,18,18,6],    
+    ["4444-E","Uxia","Andujar Gonzalez",15,19,2,2,2],
+    ["5555-F","Yago","Gil Morales",0,0,0,0,0] 
+]; 
+
+    document.write("<table border='1'>");
+    
+    document.write("<tr>");
+        document.write("<th >DNI</th>");
+        document.write("<th >Nome</th>");
+        document.write("<th >Apelidos</th>");
+        document.write("<th >Desp. Web</th>");
+        document.write("<th >DIW</th>");
+        document.write("<th >DWCC</th>");
+        document.write("<th >DWCS</th>");
+        document.write("<th >EIE</th>");
+    document.write("</tr>");
+    
+    
+    for(i=0; i<datos.length; i++){
+        document.write("<tr>");
+        
+            for(j=0; j<datos[i].length; j++){
+                
+                if(datos[i][j]>8 && j == 3  || datos[i][j]>15 && j == 4 || datos[i][j]>15 && j == 5 || datos[i][j]>17 && j == 6 && datos[i][7]>5){
+                    
+                    document.write("<td class='pdac' onclick='mensaje(this)'>"+datos[i][j]+"</td>");
+                    
+                }else{
+                    
+                    document.write("<td>"+datos[i][j]+"</td>");
+                    
+                }
+            }
+        document.write("</tr>");
+        document.write("<br/>");
+        }
+    document.write("</table>");
+        
+    function mensaje(x){
+        
+        var faltas = x.textContent;
+        alert("O alumno neste modulo Numero de faltas: "+faltas);
+        
+    }
+    
+</script>
+
+
+
+
+</body>
+</html>
